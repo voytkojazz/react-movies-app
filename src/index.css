@@ -1,0 +1,10 @@
+:root {
+  background-color: rgb(54, 8, 97);
+  color: rgb(211, 198, 198);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 70%;
+  border: 1px solid white;
+}
