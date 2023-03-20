@@ -11,7 +11,7 @@ export default function App() {
 
   function handleDataReceived(newData) {
     console.log(newData)
-    setSearchData(newData) // set searchResult to new response data when request is ready
+    setSearchData(newData.data) // set searchResult to new response data when request is ready
     setLoading(false);
   }
 

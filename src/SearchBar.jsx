@@ -1,9 +1,9 @@
 import './SearchBar.css'
 import axios from "axios"
-
+import { apiUrl } from './untils';
 import React from "react"
 
-const apiUrl = "http://localhost:8080"
+
 
 export default function SearchBar({ onDataReceived, onLoading }) {
 
@@ -19,7 +19,6 @@ export default function SearchBar({ onDataReceived, onLoading }) {
             }
         }).then(response => {
             onDataReceived(response);
-            
         }).catch(err => {
             console.log(err);
         });
