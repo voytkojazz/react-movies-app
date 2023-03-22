@@ -34,7 +34,7 @@ export default function SearchBar({ onDataReceived, onLoading }) {
 
             <form onSubmit={onSubmit}>
                     <input onChange={onChange} className='search-bar-input' type="text"></input>
-                    <input className='search-button' type="submit"></input>
+                    <button className='submit-button' type="submit">Search</button>
             </form>
         </div> 
     )

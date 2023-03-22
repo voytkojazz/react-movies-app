@@ -1,10 +1,9 @@
-import React from "react";
-import DeleteButton from "./DeleteButton";
-import './ResultItem.css'
+import DeleteButton from "./DeleteButton.jsx";
 
-export default function ResultItem({movie, onDelete}) {
+
+export default function ResultInfo({movie, onDelete}) {
     return (
-        <div className="result-item">
+        <>
         <div><span>Name: </span>{movie.originalTitle}</div>
         {movie.rating && (
             <div><span>Rating: </span>{movie.rating.averageRating}⭐</div>
@@ -24,7 +23,10 @@ export default function ResultItem({movie, onDelete}) {
         {movie.rating && (
             <div><span>Number of Votes: </span>{movie.rating.numVotes}</div>
         )}
+        {movie.genres && (
+            <div><span>Genres: </span>{movie.genres}</div>
+        )}
         <DeleteButton handleDelete={onDelete} id={movie.tconst}/>
-        </div>
-    );
+        </>
+    )
 }
