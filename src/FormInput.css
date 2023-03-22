@@ -56,7 +56,3 @@
 .input-container input.is-valid + label {
     transform: translateY(-100%) scale(0.75);
 }
-
-.input-container .checkmark {
-    height: 2em;
-}

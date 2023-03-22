@@ -36,9 +36,10 @@ export default function AddMovieForm({setCreated, setCreatedId}) {
                     runtimeMinutes: runtimeMinutes,
                     genres: genres
                 }),
+
                 headers: {
                     "Content-Type": "application/json",
-                  },
+                },
             })
             
             let responseJson = await response.json();
@@ -78,8 +79,7 @@ export default function AddMovieForm({setCreated, setCreatedId}) {
                 {errors?.genres && <div className="error-message">{errors.genres}</div>}
                 <FormInput type={"text"} onChange={setGenres} id={"genres"} labelValue={"Genres (separated by comma & without spaces)"}/>
                 
-                <button type="submit" className="submit-button form-button">Add</button>
-                
+                <button type="submit" className="submit-button">Add</button>
             </form>
     );
 }
