@@ -8,7 +8,7 @@ export default function FormInput ({type, id, onChange, labelValue}) {
     const [inputClassName, setinputClassName] = useState("")
 
     useEffect(() => {
-        if(inputvalue !== null) {
+        if(inputvalue !== "") {
             setinputClassName("is-valid")
         }
         onChange(inputvalue);
