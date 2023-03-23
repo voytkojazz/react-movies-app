@@ -4,7 +4,7 @@ import "./FormInput.css"
 
 export default function FormInput ({type, id, onChange, labelValue}) {
 
-    const [inputvalue, setinputvalue] = useState("")
+    const [inputvalue, setinputvalue] = useState(null)
     const [inputClassName, setinputClassName] = useState("")
 
     useEffect(() => {

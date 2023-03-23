@@ -5,7 +5,8 @@ import BackButton from './BackButton';
 import Navigation from './Navigation';
 import ResultContainer from './ResultContainer';
 import SearchBar from './SearchBar'
-
+import AddPrincipalComponent from "./AddPrincipalComponent"
+import AddPrincipalForm from "./AddPrincipalForm"
 
 
 export default function App() {
@@ -28,7 +29,8 @@ export default function App() {
     <div className='container'>
       <Navigation>
         <NavigationButton text={"Add film"} setPage={setPage} pageName={"add-movie"}/>
-        <NavigationButton text={"Test"} setPage={setPage} pageName={"search"}/>
+        <NavigationButton text={"Search Films"} setPage={setPage} pageName={"search"}/>
+        <NavigationButton text={"Add Principal"} setPage={setPage} pageName={"add-principal"}/>
       </Navigation>
       {page === "search" &&
         <>
@@ -42,6 +44,12 @@ export default function App() {
           <AddMovieComponent>
             <BackButton setPage={setPage}/>
           </AddMovieComponent>         
+        </>
+      }
+      {
+        page == "add-principal" && 
+        <>
+          <AddPrincipalComponent/>
         </>
       }
     </div>
